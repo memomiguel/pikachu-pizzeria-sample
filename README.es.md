@@ -55,7 +55,6 @@ Cambia el idioma con los iconos de bandera en la barra de navegación, o añade 
 - Es un **proyecto de ejemplo estático** — el formulario de contacto no envía correos ni guarda datos.
 - Las imágenes están incluidas localmente para que el sitio funcione completamente sin conexión.
 - Desarrollado como parte de mi formación en el IES El Álamo (Madrid).
-- Este proyecto se desarrolló **sin asistencia de IA** — solo emplea prácticas básicas de desarrollo web. Otros proyectos más complejos de mi portfolio indican explícitamente dónde se utilizó IA.
 
 ## Autor
 

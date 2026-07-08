@@ -55,7 +55,6 @@ Switch language with the flag icons in the navigation bar, or append `?lang=it` 
 - This is a **static sample project** — the contact form does not send emails or persist data.
 - Images are included locally so the site works fully offline.
 - Built as part of my learning path at IES El Álamo (Madrid).
-- This project was built **without AI assistance** — it relies on basic web development practices only. Other, more complex portfolio projects explicitly document where AI was used.
 
 ## Author
 
