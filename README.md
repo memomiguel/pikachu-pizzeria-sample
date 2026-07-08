@@ -1,5 +1,7 @@
 # Pikachu's Pizzeria — Sample Website
 
+> Hay [una versión en español](README.es.md) de este README.
+
 A basic multi-page website built as a portfolio sample. It simulates a small local business (a pizzeria) and demonstrates foundational web development skills suitable for a developer CV.
 
 ## What this project covers
