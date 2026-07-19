@@ -1,61 +1,116 @@
 # Pikachu's Pizzeria — Sitio web de ejemplo
 
-> [English version](README.md)
+**Un sitio web multipágina para una pizzería local**, desarrollado como el primer proyecto de una práctica formativa Erasmus+. Demuestra fundamentos de desarrollo web: includes del lado del servidor, contenido bilingüe y maquetación CSS limpia.
 
-Sitio web multipágina básico creado como muestra de portfolio. Simula un negocio local (una pizzería) y demuestra habilidades fundamentales de desarrollo web adecuadas para un CV de desarrollador.
+> **Idioma:** Español | [English](README.md)
 
-## Qué incluye este proyecto
+---
 
-| Área | Detalles |
-|------|----------|
-| **Páginas** | Inicio, Quiénes somos, Menú y Contacto |
-| **Backend** | PHP con includes reutilizables (`header.php`, `footer.php`) |
-| **Internacionalización** | Español (por defecto) e italiano mediante parámetros `?lang=es` / `?lang=it` |
-| **Estilos** | CSS personalizado con maquetación, tipografía, efectos hover y estilos de formulario |
-| **Formularios** | Formulario de contacto con validación HTML5 (`required`, `email`, `select`, `textarea`) |
-| **Contenido** | Contenido estático de negocio: historia, valores, platos del menú con imágenes y datos de contacto |
+## Contexto del proyecto
 
-## Habilidades demostradas
+|              |                                                                          |
+| ------------ | ------------------------------------------------------------------------ |
+| **Autor**    | Miguel Eduardo Marcano Ordaz                                             |
+| **Contexto** | Práctica formativa Erasmus+ en TR Consulting Group (TR CONSULTINGROUP SRL), Avezzano, Italia — **proyecto #1 de 4** (complejidad creciente) |
+| **Rol**      | Técnico en Software (becario a tiempo completo)                          |
+| **Año**      | 2026                                                                     |
+| **Idiomas**  | Español (predeterminado) e italiano                                      |
 
-- **PHP** — Includes del lado del servidor, renderizado condicional y año dinámico en el pie de página
-- **HTML5** — Estructura semántica (`header`, `nav`, `main`, `section`, `footer`), etiquetas accesibles y elementos de formulario
-- **CSS3** — Maquetación con Flexbox, degradados, transiciones, estados de foco y sección de contacto adaptable (`flex-wrap`)
-- **Estructura del proyecto** — Separación de layout (cabecera/pie), estilos y contenido de cada página en archivos distintos
-- **i18n básico** — Cambio de idioma sin framework, manteniendo la navegación entre páginas
-- **UX** — Navegación clara, jerarquía visual y diseño práctico del formulario de contacto
+---
+
+## Capturas de pantalla
+
+![Página de inicio — Pikachu's Pizzeria](Pizzeria1.PNG)
+
+![Página del menú — opciones de pizza](Pizzeria2.PNG)
+
+---
+
+## Descripción general
+
+Pikachu's Pizzeria es un sitio multipágina estático que simula un pequeño negocio local. Fue el punto de entrada de la progresión web de la práctica (pizzería → biblioteca → alquiler de propiedades → SaaS clínico MVP) y se centra en lo esencial: includes PHP reutilizables, interfaz en dos idiomas y CSS escrito a mano sin framework.
+
+| Área                     | Detalles                                                                     |
+| ------------------------ | --------------------------------------------------------------------------- |
+| **Páginas**              | Inicio, Quiénes somos, Menú y Contacto                                      |
+| **Backend**              | PHP con includes reutilizables (`header.php`, `footer.php`)                 |
+| **Internacionalización** | Español (predeterminado) e italiano mediante `?lang=es` / `?lang=it`        |
+| **Estilos**              | CSS personalizado con layout, tipografía, efectos hover y estilos de formulario |
+| **Formularios**          | Formulario de contacto con validación HTML5 (`required`, `email`, `select`, `textarea`) |
+| **Contenido**            | Contenido estático de negocio: historia, valores, menú con imágenes, datos de contacto |
+
+---
+
+## Características
+
+- **PHP** — includes del lado del servidor, renderizado condicional y año dinámico en el pie de página
+- **HTML5** — estructura semántica (`header`, `nav`, `main`, `section`, `footer`), etiquetas accesibles y elementos de formulario
+- **CSS3** — layout con Flexbox, gradientes, transiciones, estados de foco y sección de contacto responsive (`flex-wrap`)
+- **Estructura del proyecto** — separación de layout (header/footer), estilos y contenido de página en varios archivos
+- **Fundamentos de i18n** — cambio de idioma sin framework, preservando la navegación entre páginas
+- **UX** — navegación clara, jerarquía visual y un layout práctico para el formulario de contacto
+
+---
+
+## Stack tecnológico
+
+| Capa                 | Tecnología                                      |
+| -------------------- | ----------------------------------------------- |
+| Backend              | PHP (sin framework)                             |
+| Frontend             | HTML5, CSS3                                     |
+| Internacionalización | Cambio de idioma por parámetro de consulta (`?lang=`) |
+| Servidor local       | Servidor integrado de PHP                       |
+
+---
 
 ## Estructura del proyecto
 
 ```
+sitio-web-offline/
 ├── index.php           # Página de inicio
 ├── quienes-somos.php   # Quiénes somos
 ├── servicios.php       # Menú
-├── contacto.php        # Formulario de contacto e información del negocio
-├── header.php          # Cabecera y navegación compartida
+├── contacto.php        # Formulario de contacto e info del negocio
+├── header.php          # Cabecera y navegación compartidas
 ├── footer.php          # Pie de página compartido
 ├── style.css           # Estilos globales
 └── imagenes/           # Logo, banderas, fondos e imágenes de pizzas
 ```
 
-## Ejecución en local
+---
 
-Requiere tener PHP instalado en el equipo.
+## Primeros pasos
+
+Requiere PHP instalado en tu máquina.
 
 ```bash
 cd sitio-web-offline
 php -S localhost:8000
 ```
 
-Después abre [http://localhost:8000](http://localhost:8000) en el navegador.
+Luego abre [http://localhost:8000](http://localhost:8000) en tu navegador.
 
-Cambia el idioma con los iconos de bandera en la barra de navegación, o añade `?lang=it` / `?lang=es` a la URL de cualquier página.
+Cambia el idioma con los iconos de bandera en la barra de navegación, o añade `?lang=it` / `?lang=es` a cualquier URL.
 
-## Notas
+**Notas**
 
-- Es un **proyecto de ejemplo estático** — el formulario de contacto no envía correos ni guarda datos.
-- Las imágenes están incluidas localmente para que el sitio funcione completamente sin conexión.
-- Desarrollado como parte de mi formación en el IES El Álamo (Madrid).
+- Es un **proyecto de ejemplo estático** — el formulario de contacto no envía correos ni persiste datos.
+- Las imágenes están incluidas localmente para que el sitio funcione completamente offline.
+
+---
 
 ## Autor
 
-**Miguel** — [github.com/memomiguel](https://github.com/memomiguel)
+**Miguel Eduardo Marcano Ordaz**
+
+|          |                                                                                           |
+| -------- | ----------------------------------------------------------------------------------------- |
+| GitHub   | [github.com/memomiguel](https://github.com/memomiguel)                                    |
+| LinkedIn | [Miguel Eduardo Marcano Ordaz](https://www.linkedin.com/in/miguel-eduardo-marcano-ordaz/) |
+| Email    | [memomiguel@proton.me](mailto:memomiguel@proton.me)                                       |
+
+---
+
+## Licencia
+
+Publicado bajo la **Licencia MIT**. Consulta [LICENSE](LICENSE) para más detalles.
